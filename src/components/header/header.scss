@@ -1,5 +1,8 @@
 $main-color: white;
 
+
+
+
 .header{
   a{
     text-decoration: none;
@@ -34,5 +37,11 @@ $main-color: white;
 
   &__item{
 
+  }
+}
+
+@media screen and (max-width: 767px){
+  .menu-list{
+    display: none;
   }
 }
