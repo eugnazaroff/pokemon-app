@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 import './App.css'
 import axios from "axios";
+import PokemonCardList from "./components/pokemonCardList/pokemonCardList";
 
 const App = () => {
 
@@ -9,8 +10,7 @@ const App = () => {
 
     useEffect(() => {
         const fetchData = async () => {
-            const pokemonData = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=20")
-            console.log(pokemonData.data.results)
+            const pokemonData = await axios.get("https://pokeapi.co/api/v2/pokemon?limit=21")
             setPokemons(pokemonData.data.results)
         }
         fetchData()
@@ -22,9 +22,7 @@ const App = () => {
         <div>
             {
                 pokemons.length ?
-                    pokemons.map((pokemon) => (
-                        <p>{pokemon.name}</p>
-                    ))
+                    <PokemonCardList pokemons={pokemons}/>
                     :
                     <p>Loading...</p>
             }

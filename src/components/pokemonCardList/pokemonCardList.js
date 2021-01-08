@@ -7,7 +7,7 @@ const PokemonCardList = ({pokemons}) => {
     return (
         <div className="card-list">
             {pokemons.map((pokemon) => (
-                    <PokemonCard pokemon={pokemon}/>
+                    <PokemonCard key={pokemon.name+Math.random()} pokemon={pokemon}/>
                 )
             )}
         </div>

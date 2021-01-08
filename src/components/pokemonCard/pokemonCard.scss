@@ -2,8 +2,10 @@
   box-shadow: 10px 10px 7px rgba(0,0,0,.2);
   width: 150px;
   display: flex;
+  background: rgba(1,1,1,.1);
   flex-direction: column;
   cursor: pointer;
+  margin: 4px;
 
   &:hover{
     transform: translateY(.5px);
